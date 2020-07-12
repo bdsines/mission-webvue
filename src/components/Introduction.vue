@@ -1,4 +1,5 @@
 <template>
+ <layout name="LayoutDefault">
   <div class="intro">
     <h1>{{ msg }}</h1>
     <div class="container">
@@ -18,13 +19,19 @@
    
     
 </div>
+ </layout>
 </template>
 
 <script>
+import Layout from '../layouts/Layout';
+
 export default {
   name: 'Introduction',
   props: {
     msg: String
+  },
+  components:{
+    Layout,
   }
 }
 </script>

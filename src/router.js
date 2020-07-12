@@ -10,7 +10,7 @@ export default new Router({
   routes: [
     {
       path: `/`,
-      name: `intro`,
+      name: `introduction`,
       component: Introduction,
     },
     {
