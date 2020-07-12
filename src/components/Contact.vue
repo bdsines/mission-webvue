@@ -1,6 +1,7 @@
 <template>
   <layout name="LayoutDefault">
     <div id="footer">
+    <p>We love hearing from you whether you would like to sponsor or volunteer! Please fill the form below one of us will get in touch with you!</p>
     <div class="row">
     <div class="col-sm">
       <section>
