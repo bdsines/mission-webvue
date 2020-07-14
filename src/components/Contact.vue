@@ -1,6 +1,6 @@
 <template>
   <layout name="LayoutDefault">
-    <div id="footer">
+    <b-container id="contact">
     <p>We love hearing from you whether you would like to sponsor or volunteer! Please fill the form below one of us will get in touch with you!</p>
     <div class="row">
     <div class="col-sm">
@@ -75,21 +75,15 @@
         <section>
           <h3>Social</h3>
           <div class="row">
-          <div class="col-sm">
-          <facebook url="url" scale="2"></facebook>
-          </div>
-          <div class="col-sm">
-                <email url="url" scale="2"></email>
-                </div>
-                <div class="col-sm">
+          <facebook url="url" scale="2" style="padding-right: 10px;padding-left: 15px;"></facebook>
+                <email url="url" scale="2" style="padding-right: 10px;"></email>
                 <whats-app url="url" scale="2"></whats-app>
-                </div>
                 </div>
         </section>
       </section>
       </div>
       </div>
-    </div>
+    </b-container>
   </layout>
 </template>
 
@@ -145,16 +139,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-split.contact > section {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  padding: 3.15rem 4rem;
-}
+
+
 
 </style>

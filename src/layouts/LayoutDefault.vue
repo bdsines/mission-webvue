@@ -1,14 +1,18 @@
 <template>
-  <div id="wrapper">
+  <div >
+  <b-container id="wrapper">
     <div class="LayoutDefault">
       <b-card
         overlay
-        title="Mission She"
-        bg-variant="light"
+        title="MISSION SHE"
+        sub-title="subtitle"
+        bg-variant="dark"
         text-variant="white"
+        header-bg-variant="transparent"
+        header-text-variant="white"
       >
-        <b-card-header header-tag="nav">
-          <b-nav card-header pill fill variant="faded" type="light">
+        <b-card-header header-tag="nav" header-text-variant="white" header-bg-variant="transparent" header-class="navheader">
+          <b-nav card-header pill fill variant="faded" type="light" >
             <!-- <b-nav-item>'s with child routes. Note the trailing slash on the first <b-nav-item> -->
             <b-nav-item active>
               <router-link to="/">MISSION</router-link>
@@ -20,16 +24,15 @@
               <router-link to="/contact">SUPPORT US</router-link>
             </b-nav-item>
             <b-nav-item align="float:right">
-              <div style="float:right">
-                <facebook url="url" scale="2"></facebook>
-                <email url="url" scale="2"></email>
+                <facebook url="url" scale="2" style="padding-right: 10px;"></facebook>
+                <email url="url" scale="2" style="padding-right: 10px;"></email>
                 <whats-app url="url" scale="2"></whats-app>
-              </div>
             </b-nav-item>
           </b-nav>
         </b-card-header>
 
-        <b-card-body>
+        <b-card-body body-text-variant="light" body-bg-variant="transparent"
+        >
           <main class="LayoutDefault__main">
             <slot />
           </main>
@@ -40,7 +43,7 @@
       <nuxt-child></nuxt-child>
       -->
         </b-card-body>
-        <b-card-footer>
+        <!--b-card-footer>
           <div style="float:right" class="row">
             <div class="column-sm">
               <facebook background-color="white" url="url" scale="2"></facebook>
@@ -55,10 +58,12 @@
               <span></span>
             </div>
           </div>
-        </b-card-footer>
+        </b-card-footer-->
       </b-card>
     </div>
+    </b-container>
   </div>
+  
 </template>
 
 <script>
@@ -91,13 +96,12 @@ export default {
   margin-left: auto;
   padding-right: 1em;
   padding-left: 1em;
-  color: olive;
 }
 #wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   background-color: #212931;
   background-blend-mode: normal;
@@ -105,37 +109,15 @@ export default {
   background-image: url("../images/overlay.png"),
     linear-gradient(to right, black, transparent 60%),
     url("../images/adult-art-baby-black-background-208188.jpg");
-  background-size: auto, auto, 100% auto;
+  background-size: 100%, 100% auto, 100%;
   background-position: center, center, top center;
   background-repeat: repeat, no-repeat, no-repeat;
   background-attachment: scroll, scroll, scroll;
   z-index: -3;
 }
-#wrapper.fade-in:before {
-  pointer-events: none;
-  -moz-transition: opacity 1s ease-in-out;
-  -webkit-transition: opacity 1s ease-in-out;
-  -ms-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-  -moz-transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  -ms-transition-delay: 0.75s;
-  transition-delay: 0.75s;
-  background: #1e252d;
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
+navheader{
+  color: white;
+  z-index: 3;
 }
 
-body.is-preload #wrapper.fade-in:before {
-  opacity: 1;
-}
-li > nav-item > a {
-  color: white;
-}
 </style>
